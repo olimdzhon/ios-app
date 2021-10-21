@@ -1,0 +1,14 @@
+//
+//  Service.swift
+//  taskApp
+//
+//  Created by Олимджон Садыков on 20.10.2021.
+//
+
+import Foundation
+struct Service: Codable {
+    let id: String
+    let name: String
+    let image: String
+    var imageData: Data?
+}

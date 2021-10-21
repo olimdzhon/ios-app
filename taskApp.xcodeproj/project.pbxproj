@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AFA61D068BE0D42C3CF29CA /* Pods_taskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3E37DE46A3C3466C2C834A /* Pods_taskApp.framework */; };
 		4B121BC12718043400268356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B121BC02718043400268356 /* AppDelegate.swift */; };
 		4B121BC32718043400268356 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B121BC22718043400268356 /* SceneDelegate.swift */; };
 		4B121BC52718043400268356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B121BC42718043400268356 /* ViewController.swift */; };
@@ -15,9 +14,31 @@
 		4B121BCA2718043700268356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B121BC92718043700268356 /* Assets.xcassets */; };
 		4B121BCD2718043700268356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B121BCB2718043700268356 /* LaunchScreen.storyboard */; };
 		4B121BD52718048A00268356 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4B121BD42718048A00268356 /* Podfile */; };
+		4B5D813827204CF600DDB60A /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D813727204CF600DDB60A /* PaymentManager.swift */; };
+		4B5D813A27204D0F00DDB60A /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D813927204D0F00DDB60A /* ServiceManager.swift */; };
+		4B5D814927205E3400DDB60A /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D814827205E3300DDB60A /* ImageRepository.swift */; };
+		4B5D814E27206A0500DDB60A /* ServiceEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D814A27206A0500DDB60A /* ServiceEntity+CoreDataProperties.swift */; };
+		4B5D814F27206A0500DDB60A /* PaymentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D814B27206A0500DDB60A /* PaymentEntity+CoreDataClass.swift */; };
+		4B5D815027206A0500DDB60A /* ServiceEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D814C27206A0500DDB60A /* ServiceEntity+CoreDataClass.swift */; };
+		4B5D815127206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D814D27206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift */; };
+		4B6665C42720959100587893 /* ServiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6665C32720959100587893 /* ServiceTVC.swift */; };
+		4B6665C62721241500587893 /* PaymentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6665C52721241500587893 /* PaymentTVC.swift */; };
+		4B7845C9271FF0500064DDFE /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845C8271FF0500064DDFE /* Payment.swift */; };
+		4B7845CC271FF0E50064DDFE /* PaymnetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845CB271FF0E50064DDFE /* PaymnetList.swift */; };
+		4B7845CE271FF17C0064DDFE /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845CD271FF17C0064DDFE /* PaymentTableViewCell.swift */; };
+		4B7845D1271FF2E10064DDFE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845D0271FF2E10064DDFE /* Observable.swift */; };
+		4B7845D4271FFCDC0064DDFE /* PaymentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845D3271FFCDC0064DDFE /* PaymentRepository.swift */; };
 		4B8C8484271AF1CE008892AA /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8C8483271AF1CE008892AA /* CustomTabViewController.swift */; };
 		4B96C211271C36BC0047689C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B96C210271C36BC0047689C /* HomeViewController.swift */; };
 		4B96C213271C37260047689C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B96C212271C37260047689C /* HistoryViewController.swift */; };
+		4BEF5CE92720425200554997 /* MegApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF5CE72720425200554997 /* MegApp.xcdatamodeld */; };
+		4BF73B0B27201E91006BEC2C /* ServiceTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B0A27201E91006BEC2C /* ServiceTableViewCellViewModel.swift */; };
+		4BF73B0D27201ED1006BEC2C /* ServiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B0C27201ED1006BEC2C /* ServiceList.swift */; };
+		4BF73B0F27201EFB006BEC2C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B0E27201EFB006BEC2C /* Service.swift */; };
+		4BF73B13272021D2006BEC2C /* ServiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B12272021D2006BEC2C /* ServiceRepository.swift */; };
+		4BF73B15272027F2006BEC2C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B14272027F2006BEC2C /* Config.swift */; };
+		4BF73B1727202927006BEC2C /* ServicePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B1627202927006BEC2C /* ServicePaymentViewController.swift */; };
+		4BF73B192720315F006BEC2C /* PaymentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B182720315F006BEC2C /* PaymentDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +52,32 @@
 		4B121BCC2718043700268356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B121BCE2718043700268356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B121BD42718048A00268356 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4B5D813727204CF600DDB60A /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
+		4B5D813927204D0F00DDB60A /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		4B5D813B2720548900DDB60A /* Pods_taskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_taskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5D814827205E3300DDB60A /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		4B5D814A27206A0500DDB60A /* ServiceEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4B5D814B27206A0500DDB60A /* PaymentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PaymentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4B5D814C27206A0500DDB60A /* ServiceEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4B5D814D27206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PaymentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4B6665C32720959100587893 /* ServiceTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTVC.swift; sourceTree = "<group>"; };
+		4B6665C52721241500587893 /* PaymentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTVC.swift; sourceTree = "<group>"; };
+		4B7845C8271FF0500064DDFE /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		4B7845CB271FF0E50064DDFE /* PaymnetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymnetList.swift; sourceTree = "<group>"; };
+		4B7845CD271FF17C0064DDFE /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		4B7845D0271FF2E10064DDFE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		4B7845D3271FFCDC0064DDFE /* PaymentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRepository.swift; sourceTree = "<group>"; };
 		4B8C8483271AF1CE008892AA /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
 		4B96C210271C36BC0047689C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4B96C212271C37260047689C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		4BEF5CE82720425200554997 /* MegApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MegApp.xcdatamodel; sourceTree = "<group>"; };
+		4BF73B0A27201E91006BEC2C /* ServiceTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		4BF73B0C27201ED1006BEC2C /* ServiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceList.swift; sourceTree = "<group>"; };
+		4BF73B0E27201EFB006BEC2C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4BF73B12272021D2006BEC2C /* ServiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRepository.swift; sourceTree = "<group>"; };
+		4BF73B14272027F2006BEC2C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4BF73B1627202927006BEC2C /* ServicePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePaymentViewController.swift; sourceTree = "<group>"; };
+		4BF73B182720315F006BEC2C /* PaymentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailsViewController.swift; sourceTree = "<group>"; };
 		DB3E37DE46A3C3466C2C834A /* Pods_taskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E5857A09274D8F5EC09599 /* Pods-taskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taskApp.release.xcconfig"; path = "Target Support Files/Pods-taskApp/Pods-taskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AFA61D068BE0D42C3CF29CA /* Pods_taskApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,24 +123,111 @@
 		4B121BBF2718043400268356 /* taskApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B5D812E27204C2300DDB60A /* data */,
+				4B5D812D2720481800DDB60A /* manager */,
+				4BF73B0727201693006BEC2C /* customCell */,
+				4B7845D2271FFCC50064DDFE /* repository */,
+				4B7845CF271FF2C10064DDFE /* observable */,
+				4B7845CA271FF0D10064DDFE /* viewmodel */,
+				4B7845C7271FF0270064DDFE /* model */,
+				4B7845C6271FEFFA0064DDFE /* viewcontroller */,
 				4B121BD42718048A00268356 /* Podfile */,
 				4B121BC02718043400268356 /* AppDelegate.swift */,
 				4B121BC22718043400268356 /* SceneDelegate.swift */,
-				4B121BC42718043400268356 /* ViewController.swift */,
 				4B121BC62718043400268356 /* Main.storyboard */,
 				4B121BC92718043700268356 /* Assets.xcassets */,
 				4B121BCB2718043700268356 /* LaunchScreen.storyboard */,
 				4B121BCE2718043700268356 /* Info.plist */,
+				4BF73B14272027F2006BEC2C /* Config.swift */,
+				4BEF5CE72720425200554997 /* MegApp.xcdatamodeld */,
+			);
+			path = taskApp;
+			sourceTree = "<group>";
+		};
+		4B5D812D2720481800DDB60A /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				4B5D813727204CF600DDB60A /* PaymentManager.swift */,
+				4B5D813927204D0F00DDB60A /* ServiceManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		4B5D812E27204C2300DDB60A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				4B5D814B27206A0500DDB60A /* PaymentEntity+CoreDataClass.swift */,
+				4B5D814D27206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift */,
+				4B5D814C27206A0500DDB60A /* ServiceEntity+CoreDataClass.swift */,
+				4B5D814A27206A0500DDB60A /* ServiceEntity+CoreDataProperties.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		4B7845C6271FEFFA0064DDFE /* viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				4B121BC42718043400268356 /* ViewController.swift */,
 				4B8C8483271AF1CE008892AA /* CustomTabViewController.swift */,
 				4B96C210271C36BC0047689C /* HomeViewController.swift */,
 				4B96C212271C37260047689C /* HistoryViewController.swift */,
+				4BF73B1627202927006BEC2C /* ServicePaymentViewController.swift */,
+				4BF73B182720315F006BEC2C /* PaymentDetailsViewController.swift */,
 			);
-			path = taskApp;
+			path = viewcontroller;
+			sourceTree = "<group>";
+		};
+		4B7845C7271FF0270064DDFE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4B7845C8271FF0500064DDFE /* Payment.swift */,
+				4BF73B0E27201EFB006BEC2C /* Service.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4B7845CA271FF0D10064DDFE /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				4B7845CB271FF0E50064DDFE /* PaymnetList.swift */,
+				4B7845CD271FF17C0064DDFE /* PaymentTableViewCell.swift */,
+				4BF73B0A27201E91006BEC2C /* ServiceTableViewCellViewModel.swift */,
+				4BF73B0C27201ED1006BEC2C /* ServiceList.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		4B7845CF271FF2C10064DDFE /* observable */ = {
+			isa = PBXGroup;
+			children = (
+				4B7845D0271FF2E10064DDFE /* Observable.swift */,
+			);
+			path = observable;
+			sourceTree = "<group>";
+		};
+		4B7845D2271FFCC50064DDFE /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				4B7845D3271FFCDC0064DDFE /* PaymentRepository.swift */,
+				4BF73B12272021D2006BEC2C /* ServiceRepository.swift */,
+				4B5D814827205E3300DDB60A /* ImageRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		4BF73B0727201693006BEC2C /* customCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B6665C32720959100587893 /* ServiceTVC.swift */,
+				4B6665C52721241500587893 /* PaymentTVC.swift */,
+			);
+			path = customCell;
 			sourceTree = "<group>";
 		};
 		C9C590DCF4A1BF97219757B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B5D813B2720548900DDB60A /* Pods_taskApp.framework */,
 				DB3E37DE46A3C3466C2C834A /* Pods_taskApp.framework */,
 			);
 			name = Frameworks;
@@ -220,10 +350,32 @@
 			files = (
 				4B96C211271C36BC0047689C /* HomeViewController.swift in Sources */,
 				4B8C8484271AF1CE008892AA /* CustomTabViewController.swift in Sources */,
+				4BF73B0F27201EFB006BEC2C /* Service.swift in Sources */,
+				4B7845CE271FF17C0064DDFE /* PaymentTableViewCell.swift in Sources */,
+				4B5D813A27204D0F00DDB60A /* ServiceManager.swift in Sources */,
+				4B6665C42720959100587893 /* ServiceTVC.swift in Sources */,
+				4B7845C9271FF0500064DDFE /* Payment.swift in Sources */,
 				4B121BC52718043400268356 /* ViewController.swift in Sources */,
+				4BF73B1727202927006BEC2C /* ServicePaymentViewController.swift in Sources */,
+				4BF73B192720315F006BEC2C /* PaymentDetailsViewController.swift in Sources */,
+				4B6665C62721241500587893 /* PaymentTVC.swift in Sources */,
+				4B7845CC271FF0E50064DDFE /* PaymnetList.swift in Sources */,
+				4B5D814E27206A0500DDB60A /* ServiceEntity+CoreDataProperties.swift in Sources */,
+				4BF73B13272021D2006BEC2C /* ServiceRepository.swift in Sources */,
+				4B5D814F27206A0500DDB60A /* PaymentEntity+CoreDataClass.swift in Sources */,
+				4BEF5CE92720425200554997 /* MegApp.xcdatamodeld in Sources */,
+				4B5D813827204CF600DDB60A /* PaymentManager.swift in Sources */,
+				4B7845D1271FF2E10064DDFE /* Observable.swift in Sources */,
+				4B5D815027206A0500DDB60A /* ServiceEntity+CoreDataClass.swift in Sources */,
 				4B96C213271C37260047689C /* HistoryViewController.swift in Sources */,
+				4B5D815127206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift in Sources */,
+				4BF73B15272027F2006BEC2C /* Config.swift in Sources */,
+				4B7845D4271FFCDC0064DDFE /* PaymentRepository.swift in Sources */,
+				4BF73B0D27201ED1006BEC2C /* ServiceList.swift in Sources */,
+				4BF73B0B27201E91006BEC2C /* ServiceTableViewCellViewModel.swift in Sources */,
 				4B121BC12718043400268356 /* AppDelegate.swift in Sources */,
 				4B121BC32718043400268356 /* SceneDelegate.swift in Sources */,
+				4B5D814927205E3400DDB60A /* ImageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +581,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4BEF5CE72720425200554997 /* MegApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4BEF5CE82720425200554997 /* MegApp.xcdatamodel */,
+			);
+			currentVersion = 4BEF5CE82720425200554997 /* MegApp.xcdatamodel */;
+			path = MegApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4B121BB52718043400268356 /* Project object */;
 }
