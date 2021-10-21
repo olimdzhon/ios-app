@@ -75,10 +75,12 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         let name = viewModel.payments.value?[indexPath.row].name
         let data = viewModel.payments.value?[indexPath.row].imageData ?? UIImage(named: "topup")?.pngData()
         let date = viewModel.payments.value?[indexPath.row].date
+        let cost = viewModel.payments.value?[indexPath.row].cost
         let image = UIImage(data: data!)
         cell.name = name
         cell.image = image
         cell.date = date
+        cell.cost = cost
         cell.layoutSubviews()
 
         return cell

@@ -12,6 +12,7 @@ class PaymentTVC: UITableViewCell {
     var name: String?
     var image: UIImage?
     var date: String?
+    var cost: String?
     
     var label: UILabel = {
         var label = UILabel()
@@ -23,7 +24,14 @@ class PaymentTVC: UITableViewCell {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .gray
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 13.0)
+        return label
+    }()
+    
+    var label3: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 17.0)
         return label
     }()
     
@@ -47,6 +55,7 @@ class PaymentTVC: UITableViewCell {
         self.addSubview(imageContainer)
         self.addSubview(label)
         self.addSubview(label2)
+        self.addSubview(label3)
         
         mainImageView.centerYAnchor.constraint(equalTo: imageContainer.centerYAnchor).isActive = true
         mainImageView.centerXAnchor.constraint(equalTo: imageContainer.centerXAnchor).isActive = true
@@ -58,11 +67,12 @@ class PaymentTVC: UITableViewCell {
         
         label.leftAnchor.constraint(equalTo: imageContainer.rightAnchor, constant: CGFloat(10)).isActive = true
         label.topAnchor.constraint(equalTo: imageContainer.topAnchor, constant: CGFloat(5)).isActive = true
-        label.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         
         label2.leftAnchor.constraint(equalTo: imageContainer.rightAnchor, constant: CGFloat(10)).isActive = true
         label2.bottomAnchor.constraint(equalTo: imageContainer.bottomAnchor, constant: CGFloat(-5)).isActive = true
-        label2.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        
+        label3.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        label3.rightAnchor.constraint(equalTo: self.rightAnchor, constant: CGFloat(-20)).isActive = true
         
         self.selectionStyle = .none
         
@@ -80,6 +90,10 @@ class PaymentTVC: UITableViewCell {
         
         if let date = date {
             label2.text = date
+        }
+        
+        if let cost = cost {
+            label3.text = cost
         }
     }
     
