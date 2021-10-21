@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(ServiceTVC.self, forCellReuseIdentifier: "ServiceTVC")
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.showsVerticalScrollIndicator = false
         
         viewModel.services.bind { [weak self] _ in
             DispatchQueue.main.async {

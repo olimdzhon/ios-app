@@ -20,6 +20,7 @@ class HistoryViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(PaymentTVC.self, forCellReuseIdentifier: "PaymentTVC")
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.showsVerticalScrollIndicator = false
         
         viewModel.payments.bind { [weak self]_ in
             DispatchQueue.main.async {
