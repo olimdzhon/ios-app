@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(ServiceTVC.self, forCellReuseIdentifier: "ServiceTVC")
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        tableView.estimatedRowHeight = 200
         
         viewModel.services.bind { [weak self] _ in
             DispatchQueue.main.async {
@@ -74,6 +73,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.services.value?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(70)
     }
     
     

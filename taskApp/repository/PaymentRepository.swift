@@ -19,12 +19,9 @@ class PaymentRepository {
             let request = URLRequest(url: URL(string: "\(Config.SERVER_URL)/getPaymentHistory")!)
             AF.request(request).validate().responseJSON { response in
                 switch response.result {
-                case .success(let data):
-                    print(data)
+                case .success(_):
                     
                     let paymentModels = try! JSONDecoder().decode([Payment].self, from: response.data!)
-                    
-                    print(paymentModels)
                     
                     let payments = paymentModels.compactMap({
                         PaymentTableViewCellViewModel(id: $0.id, name: $0.name, to: $0.to, from: $0.from, cost: $0.cost, date: $0.date)

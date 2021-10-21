@@ -23,8 +23,7 @@ class ImageRepository {
             AF.request(request).validate(statusCode:  200..<600)
                 .responseData { response in
                     switch response.result {
-                    case .success(let data):
-                        print(data)
+                    case .success(_):
                         seal.fulfill(response.data!)
                     case .failure(let error):
                         print(error)

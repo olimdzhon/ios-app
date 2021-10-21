@@ -19,12 +19,9 @@ class ServiceRepository {
             let request = URLRequest(url: URL(string: "\(Config.SERVER_URL)/getServices")!)
             AF.request(request).validate().responseJSON { response in
                 switch response.result {
-                case .success(let data):
-                    print(data)
+                case .success(_):
                     
                     let serviceModels = try! JSONDecoder().decode([Service].self, from: response.data!)
-                    
-                    print(serviceModels)
                     
                     let services = serviceModels.compactMap({
                         ServiceTableViewCellViewModel(id: $0.id, name: $0.name, image: $0.image)

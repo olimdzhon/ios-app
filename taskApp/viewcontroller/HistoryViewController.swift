@@ -63,16 +63,22 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         return viewModel.payments.value?.count ?? 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(70)
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTVC") as! PaymentTVC
 
         let name = viewModel.payments.value?[indexPath.row].name
-        let data = viewModel.payments.value?[indexPath.row].imageData ?? UIImage(systemName: "plus.circle.fill")?.pngData()
+        let data = viewModel.payments.value?[indexPath.row].imageData ?? UIImage(named: "topup")?.pngData()
+        let date = viewModel.payments.value?[indexPath.row].date
         let image = UIImage(data: data!)
         cell.name = name
         cell.image = image
+        cell.date = date
         cell.layoutSubviews()
 
         return cell
