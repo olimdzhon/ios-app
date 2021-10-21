@@ -83,9 +83,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceTVC") as! ServiceTVC
+        
+        let service = viewModel.services.value?[indexPath.row]
 
-        let name = viewModel.services.value?[indexPath.row].name
-        let data = viewModel.services.value?[indexPath.row].imageData
+        let name = service!.name
+        let data = service!.imageData
         let image = UIImage(data: data!)
         cell.name = name
         cell.image = image
@@ -95,12 +97,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ServicePaymentViewController") as! ServicePaymentViewController
-        vc.modalPresentationStyle = .overFullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        vc.name = (viewModel.services.value?[indexPath.row].name) ?? ""
-        present(vc, animated: true, completion: nil)
+        let service = viewModel.services.value?[indexPath.row]
+        if service?.name == "More" {
+            return
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ServicePaymentViewController") as! ServicePaymentViewController
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            vc.service = service
+            present(vc, animated: true, completion: nil)
+        }
     }
     
 }
