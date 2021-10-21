@@ -9,6 +9,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="nunito_semibold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Custom Tab View Controller-->
         <scene sceneID="7BK-e9-KUd">
@@ -100,6 +105,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="qrcode.viewfinder" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didScanTap:" destination="CiK-fw-MkI" eventType="touchUpInside" id="FRd-cG-jOM"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xz-AM-Z5i">
                                                 <rect key="frame" x="33" y="30" width="38" height="50"/>
@@ -451,6 +459,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceF-sM-kba">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="pbm-tl-z9x">
+                                <rect key="frame" x="172" y="747.5" width="70" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5wk-IE-ZLA"/>
+                                    <constraint firstAttribute="width" constant="70" id="Asr-fH-5vq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Flashlight" backgroundImage="bolt.circle.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapTorchBtn:" destination="nHb-FO-lKf" eventType="touchUpInside" id="iX7-t8-gpG"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-60-fYT">
                                 <rect key="frame" x="15" y="45" width="30" height="30"/>
                                 <constraints>
@@ -465,13 +493,22 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DuX-7j-tJw"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="NEa-60-fYT" firstAttribute="top" secondItem="19b-H4-OGf" secondAttribute="top" constant="45" id="BG9-Ge-aJ2"/>
                             <constraint firstItem="NEa-60-fYT" firstAttribute="leading" secondItem="DuX-7j-tJw" secondAttribute="leading" constant="15" id="BL6-gh-ro1"/>
+                            <constraint firstItem="DuX-7j-tJw" firstAttribute="trailing" secondItem="ceF-sM-kba" secondAttribute="trailing" id="CBN-Mh-aeW"/>
+                            <constraint firstItem="ceF-sM-kba" firstAttribute="leading" secondItem="DuX-7j-tJw" secondAttribute="leading" id="FIT-6A-jTB"/>
+                            <constraint firstItem="pbm-tl-z9x" firstAttribute="centerX" secondItem="19b-H4-OGf" secondAttribute="centerX" id="aX0-6f-pgM"/>
+                            <constraint firstItem="ceF-sM-kba" firstAttribute="top" secondItem="19b-H4-OGf" secondAttribute="top" id="bH1-im-7Ad"/>
+                            <constraint firstItem="DuX-7j-tJw" firstAttribute="bottom" secondItem="pbm-tl-z9x" secondAttribute="bottom" constant="45" id="tSG-wv-SDB"/>
+                            <constraint firstAttribute="bottom" secondItem="ceF-sM-kba" secondAttribute="bottom" id="yR4-c1-DxU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dN2-MC-Bpw"/>
+                    <connections>
+                        <outlet property="flashlightBtn" destination="pbm-tl-z9x" id="PhP-vF-Xqx"/>
+                        <outlet property="previewBorderView" destination="ceF-sM-kba" id="Int-Rw-noU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsh-0w-sFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -771,6 +808,7 @@
     </scenes>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="bolt.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
@@ -781,8 +819,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

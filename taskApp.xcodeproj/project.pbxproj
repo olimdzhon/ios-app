@@ -23,6 +23,7 @@
 		4B5D815127206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D814D27206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift */; };
 		4B6665C42720959100587893 /* ServiceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6665C32720959100587893 /* ServiceTVC.swift */; };
 		4B6665C62721241500587893 /* PaymentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6665C52721241500587893 /* PaymentTVC.swift */; };
+		4B6665C927216E4D00587893 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6665C827216E4D00587893 /* DeviceUtils.swift */; };
 		4B7845C9271FF0500064DDFE /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845C8271FF0500064DDFE /* Payment.swift */; };
 		4B7845CC271FF0E50064DDFE /* PaymnetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845CB271FF0E50064DDFE /* PaymnetList.swift */; };
 		4B7845CE271FF17C0064DDFE /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7845CD271FF17C0064DDFE /* PaymentTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 		4B5D814D27206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PaymentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4B6665C32720959100587893 /* ServiceTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTVC.swift; sourceTree = "<group>"; };
 		4B6665C52721241500587893 /* PaymentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTVC.swift; sourceTree = "<group>"; };
+		4B6665C827216E4D00587893 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		4B7845C8271FF0500064DDFE /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		4B7845CB271FF0E50064DDFE /* PaymnetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymnetList.swift; sourceTree = "<group>"; };
 		4B7845CD271FF17C0064DDFE /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		4B121BBF2718043400268356 /* taskApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B6665C727216E3800587893 /* util */,
 				4B5D812E27204C2300DDB60A /* data */,
 				4B5D812D2720481800DDB60A /* manager */,
 				4BF73B0727201693006BEC2C /* customCell */,
@@ -162,6 +165,14 @@
 				4B5D814A27206A0500DDB60A /* ServiceEntity+CoreDataProperties.swift */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		4B6665C727216E3800587893 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4B6665C827216E4D00587893 /* DeviceUtils.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		4B7845C6271FEFFA0064DDFE /* viewcontroller */ = {
@@ -353,6 +364,7 @@
 				4BF73B0F27201EFB006BEC2C /* Service.swift in Sources */,
 				4B7845CE271FF17C0064DDFE /* PaymentTableViewCell.swift in Sources */,
 				4B5D813A27204D0F00DDB60A /* ServiceManager.swift in Sources */,
+				4B6665C927216E4D00587893 /* DeviceUtils.swift in Sources */,
 				4B6665C42720959100587893 /* ServiceTVC.swift in Sources */,
 				4B7845C9271FF0500064DDFE /* Payment.swift in Sources */,
 				4B121BC52718043400268356 /* ViewController.swift in Sources */,
