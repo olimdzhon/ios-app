@@ -28,28 +28,42 @@ class HistoryViewController: UIViewController {
             }
         }
         
-        firstly {
-            return PaymentRepository.shared.getPayments()
+        NetworkUtils.shared.online { (err) in
+            
+            if !err {
+                
+                firstly {
+                    return PaymentRepository.shared.getPayments()
+                }
+                .then { payments -> Promise<Void> in
+                    return PaymentManager.shared.addAll(payments: payments)
+                }
+                .then { _ -> Promise<Void> in
+                    return PaymentManager.shared.loadServices()
+                }
+                .then { _ -> Promise<Void> in
+                    return PaymentManager.shared.loadImages()
+                }
+                .then { _ -> Promise<[PaymentTableViewCellViewModel]> in
+                    return PaymentManager.shared.loadAll()
+                }
+                .done { payments in
+                    self.viewModel.payments.value = payments
+                }
+                .catch { error in
+                    print(error.localizedDescription)
+                }
+                
+            } else {
+                PaymentManager.shared.loadAll()
+                    .done { payments in
+                        self.viewModel.payments.value = payments
+                    }
+                    .catch { error in
+                        print(error.localizedDescription)
+                    }
+            }
         }
-        .then { payments -> Promise<Void> in
-            return PaymentManager.shared.addAll(payments: payments)
-        }
-        .then { _ -> Promise<Void> in
-            return PaymentManager.shared.loadServices()
-        }
-        .then { _ -> Promise<Void> in
-            return PaymentManager.shared.loadImages()
-        }
-        .then { _ -> Promise<[PaymentTableViewCellViewModel]> in
-            return PaymentManager.shared.loadAll()
-        }
-        .done { payments in
-            self.viewModel.payments.value = payments
-        }
-        .catch { error in
-            print(error.localizedDescription)
-        }
-        
     }
     
     
@@ -72,7 +86,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTVC") as! PaymentTVC
-
+        
         let name = viewModel.payments.value?[indexPath.row].name
         let data = viewModel.payments.value?[indexPath.row].imageData ?? UIImage(named: "topup")?.pngData()
         let date = viewModel.payments.value?[indexPath.row].date
@@ -83,7 +97,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.date = date
         cell.cost = cost
         cell.layoutSubviews()
-
+        
         return cell
     }
     

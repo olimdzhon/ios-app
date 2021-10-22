@@ -40,6 +40,7 @@
 		4BF73B15272027F2006BEC2C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B14272027F2006BEC2C /* Config.swift */; };
 		4BF73B1727202927006BEC2C /* ServicePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B1627202927006BEC2C /* ServicePaymentViewController.swift */; };
 		4BF73B192720315F006BEC2C /* PaymentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF73B182720315F006BEC2C /* PaymentDetailsViewController.swift */; };
+		4BFD614227229CF7000BAAAB /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD614127229CF7000BAAAB /* NetworkUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		4BF73B14272027F2006BEC2C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4BF73B1627202927006BEC2C /* ServicePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePaymentViewController.swift; sourceTree = "<group>"; };
 		4BF73B182720315F006BEC2C /* PaymentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailsViewController.swift; sourceTree = "<group>"; };
+		4BFD614127229CF7000BAAAB /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		DB3E37DE46A3C3466C2C834A /* Pods_taskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E5857A09274D8F5EC09599 /* Pods-taskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taskApp.release.xcconfig"; path = "Target Support Files/Pods-taskApp/Pods-taskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				4B6665C827216E4D00587893 /* DeviceUtils.swift */,
+				4BFD614127229CF7000BAAAB /* NetworkUtils.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				4B5D815027206A0500DDB60A /* ServiceEntity+CoreDataClass.swift in Sources */,
 				4B96C213271C37260047689C /* HistoryViewController.swift in Sources */,
 				4B5D815127206A0500DDB60A /* PaymentEntity+CoreDataProperties.swift in Sources */,
+				4BFD614227229CF7000BAAAB /* NetworkUtils.swift in Sources */,
 				4BF73B15272027F2006BEC2C /* Config.swift in Sources */,
 				4B7845D4271FFCDC0064DDFE /* PaymentRepository.swift in Sources */,
 				4BF73B0D27201ED1006BEC2C /* ServiceList.swift in Sources */,

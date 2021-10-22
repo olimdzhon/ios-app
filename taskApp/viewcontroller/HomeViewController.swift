@@ -42,26 +42,41 @@ class HomeViewController: UIViewController {
         //            print(error)
         //        }
         
-        firstly {
-            return ServiceRepository.shared.getServices()
-        }
-        .then { services -> Promise<Void> in
-            return ServiceManager.shared.addAll(services: services)
-        }
-        .then { _ -> Promise<Void> in
-            return ServiceManager.shared.loadServices()
-        }
-        .then { _ -> Promise<Void> in
-            return ServiceManager.shared.loadImages()
-        }
-        .then { _ -> Promise<[ServiceTableViewCellViewModel]> in
-            return ServiceManager.shared.loadAll()
-        }
-        .done { services in
-            self.viewModel.services.value = services
-        }
-        .catch { error in
-            print(error.localizedDescription)
+        NetworkUtils.shared.online { (err) in
+            
+            if !err {
+                
+                firstly {
+                    return ServiceRepository.shared.getServices()
+                }
+                .then { services -> Promise<Void> in
+                    return ServiceManager.shared.addAll(services: services)
+                }
+                .then { _ -> Promise<Void> in
+                    return ServiceManager.shared.loadServices()
+                }
+                .then { _ -> Promise<Void> in
+                    return ServiceManager.shared.loadImages()
+                }
+                .then { _ -> Promise<[ServiceTableViewCellViewModel]> in
+                    return ServiceManager.shared.loadAll()
+                }
+                .done { services in
+                    self.viewModel.services.value = services
+                }
+                .catch { error in
+                    print(error.localizedDescription)
+                }
+                
+            } else {
+                ServiceManager.shared.loadAll()
+                    .done { services in
+                        self.viewModel.services.value = services
+                    }
+                    .catch { error in
+                        print(error.localizedDescription)
+                    }
+            }
         }
     }
     
