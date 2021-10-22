@@ -47,7 +47,7 @@ class ServiceManager {
                 asynchronous: { (transaction) -> [ServiceTableViewCellViewModel] in
                     let services = try transaction.fetchAll(From<ServiceEntity>())
                     return services.map{
-                        ServiceTableViewCellViewModel(id: $0.id!,  name: $0.name!, image: $0.image!, imageData: $0.imageData!)
+                        ServiceTableViewCellViewModel(id: $0.id!,  name: $0.name!, image: $0.image!, imageData: $0.imageData)
                     }
                 },
                 success: { services in

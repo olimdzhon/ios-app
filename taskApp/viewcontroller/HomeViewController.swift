@@ -29,18 +29,18 @@ class HomeViewController: UIViewController {
             }
         }
         
-//        firstly {
-//            return ServiceManager.shared.delete()
-//        }
-//        .then { _ in
-//            return PaymentManager.shared.delete()
-//        }
-//        .done { _ in
-//            print("deleted")
-//        }
-//        .catch { error in
-//            print(error)
-//        }
+        //        firstly {
+        //            return ServiceManager.shared.delete()
+        //        }
+        //        .then { _ in
+        //            return PaymentManager.shared.delete()
+        //        }
+        //        .done { _ in
+        //            print("deleted")
+        //        }
+        //        .catch { error in
+        //            print(error)
+        //        }
         
         firstly {
             return ServiceRepository.shared.getServices()
@@ -95,14 +95,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceTVC") as! ServiceTVC
         
         let service = viewModel.services.value?[indexPath.row]
-
-        let name = service!.name
-        let data = service!.imageData
+        
+        let name = service?.name
+        let data = service?.imageData ?? UIImage(named: "placeholder")?.pngData()
         let image = UIImage(data: data!)
-        cell.name = name
         cell.image = image
+        cell.name = name
         cell.layoutSubviews()
-
+        
         return cell
     }
     

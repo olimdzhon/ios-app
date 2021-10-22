@@ -197,7 +197,6 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             
             alert.addAction(confirm)
             present(alert, animated: true, completion: nil)
-            
         }
     }
 }
